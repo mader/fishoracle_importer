@@ -1,0 +1,19 @@
+ 	#CHROM	POS	DBSNP_ID	REF	ALT	QUAL	SOMATIC_GERMLINE_CLASSIFICATION	CONFIDENCE 	 TCGA-AF-3400-01A-01W-0831-10	 hg19
+0	15	100594247	novel	G	G	 100.0	 somatic	 high confidence
+1	5	112175171	novel	C	C	 100.0	 somatic	 high confidence
+2	X	110496397	novel	T	T	 100.0	 somatic	 high confidence
+3	16	55907805	novel	G	G	 100.0	 somatic	 high confidence
+4	13	77570154	novel	A	A	 100.0	 somatic	 high confidence
+5	14	100182494	novel	G	G	 100.0	 somatic	 high confidence
+6	6	167570514	novel	C	C	 100.0	 somatic	 high confidence
+7	11	102713560	novel	G	G	 100.0	 somatic	 high confidence
+8	14	52520996	novel	C	C	 100.0	 somatic	 high confidence
+9	11	17191188	novel	A	A	 100.0	 somatic	 high confidence
+10	17	40990741	novel	C	C	 100.0	 somatic	 high confidence
+11	2	198495825	novel	G	G	 100.0	 somatic	 high confidence
+12	5	148407482	novel	G	G	 100.0	 somatic	 high confidence
+13	20	306702	novel	A	A	 100.0	 somatic	 high confidence
+14	11	57100241	novel	G	G	 100.0	 somatic	 high confidence
+15	11	121028731	novel	G	G	 100.0	 somatic	 high confidence
+16	14	24659659	novel	G	G	 100.0	 somatic	 high confidence
+17	17	7578265	novel	A	A	 100.0	 somatic	 high confidence

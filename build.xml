@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<project name="fishoracle_importer" default="compile">
+
+  <description>
+
+      Available options are:
+
+      - compile
+      - jar
+      - clean
+      - cleanup
+
+    </description>
+
+  <property name="SrcDir" value="src/"/>
+  <property name="LibDir" value="lib/"/>
+  <property name="BinDir" value="bin/"/>
+
+  <target name="clean" description="remove intermediate files">
+    <delete dir="${BinDir}"/>
+  </target>
+
+  <target name="cleanup" depends="clean" description="remove all artifact files">
+    <delete file="fo_importer.jar"/>
+  </target>
+
+  <target name="compile" description="compile the Java source code to class files">
+    <mkdir dir="${BinDir}"/>
+    <javac classpath="${classpath}:${LibDir}/mysql-connector-java-5.1.6.jar:${LibDir}/fo_db_api.jar:${LibDir}/javacsv.jar" srcdir="${SrcDir}/" destdir="${BinDir}" debug="on" verbose="on"/>
+  </target>
+
+  <target name="jar" depends="compile" description="create an executable Jar file">
+  
+    <pathconvert property="libs.project" pathsep=" ">  
+      <mapper>  
+        <chainedmapper>  
+          <!-- remove absolute path -->  
+          <flattenmapper />  
+  
+          <!-- add lib/ prefix -->  
+          <globmapper from="*" to="lib/*" />  
+        </chainedmapper>  
+      </mapper>  
+      <path>  
+        <!-- lib.home contains all jar files,   
+                                        in several subdirectories -->  
+        <fileset dir="${LibDir}">  
+          <include name="**/*.jar" />  
+        </fileset>  
+      </path>  
+  
+    </pathconvert>
+  
+    <jar destfile="fo_importer.jar">
+      <fileset dir="${BinDir}" includes="**/*.class"/>
+      <manifest>
+        <attribute name="Main-Class" value="de.unihamburg.zbh.fishoracleimporter.FishoracleImporter" />
+        <attribute name = "Class-Path" value = "${libs.project}"/>
+      </manifest>
+      <zipfileset dir="${LibDir}" includes="fo_db_api.jar"/>
+      <zipfileset dir="${LibDir}" includes="javacsv.jar"/>
+      <zipfileset dir="${LibDir}" includes="mysql-connector-java-5.1.22-bin.jar"/>
+    </jar>
+  </target>
+
+</project>
