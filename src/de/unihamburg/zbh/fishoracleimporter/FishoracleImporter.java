@@ -274,13 +274,15 @@ public class FishoracleImporter {
 					String chr = reader.get("#CHROM");
 					String start = reader.get("START");
 					String end = reader.get("END");
-
+					String name = reader.get("NAME");
+					
 					GenericFeature f = new GenericFeature(0, new Location(chr,
 							Integer.parseInt(start),
 							Integer.parseInt(end)),
 							dataSubType);
 
 					f.setPlatformId(platformId);
+					f.setName(name);
 					
 					featureContainer.add(f);
 

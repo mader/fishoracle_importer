@@ -1,10 +1,10 @@
 CREATE_STUDY	DATA_PATH	IMPORT_TYPE	SUB_TYPE	PROJECT_ID	ASSEMBLY	DESCRIPTION	ORGAN_ID	PLATFORM_ID
-TRUE	data/tcga_pub/coad/cnv/snp6	Segments	acgh_intensity	1	GrCh37		11	7
+TRUE	data/tcga_pub/coad/cnv/snp6	Segments	cnv_intensity	1	GrCh37		11	7
 TRUE	data/tcga_pub/coad/snv/cs	Mutations	0	1	GrCh37		11	8
 FALSE	data/tcga_pub/coad/snv/dcs	Mutations	0	1	GrCh37		11	8
 TRUE	data/tcga_pub/coad/transloc/cs	Translocations	0	1	GrCh37		11	8
 FALSE	data/tcga_pub/coad/transloc/dcs	Translocations	0	1	GrCh37		11	8
-TRUE	data/tcga_pub/read/cnv/snp6	Segments	acgh_intensity	2	GrCh37		11	7
+TRUE	data/tcga_pub/read/cnv/snp6	Segments	cnv_intensity	2	GrCh37		11	7
 TRUE	data/tcga_pub/read/snv/cs	Mutations	0	2	GrCh37		11	8
 FALSE	data/tcga_pub/read/snv/dcs	Mutations	0	2	GrCh37		11	8
 FALSE	data/tcga_pub/read/transloc/dcs	Translocations	0	2	GrCh37		11	8
